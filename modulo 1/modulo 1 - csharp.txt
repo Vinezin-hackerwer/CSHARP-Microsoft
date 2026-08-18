@@ -1,0 +1,269 @@
+string name = "Bob";
+int messages = 3;
+decimal temperature = 34.4m;
+
+Console.Write("Hello, ");
+Console.Write(name);
+Console.Write("! You have ");
+Console.Write(messages);
+Console.Write(" messages in your inbox. The temperature is ");
+Console.Write(temperature);
+Console.Write(" celsius.");]
+
+=====================
+
+Console.WriteLine("Generating invoices for customer \"Contoso Corp\" ... \n");
+Console.WriteLine("Invoice: 1021\t\tComplete!");
+Console.WriteLine("Invoice: 1022\t\tComplete!");
+
+Console.Write("\nOutput Directory:\t");
+Console.Write(@"c:\invoices");
+
+Console.Write("\n\n\u65e5\u672c\u306e\u8acb\u6c42\u66f8\u3092\u751f\u6210\u3059\u308b\u306b\u306f\uff1a\n\t");
+Console.WriteLine(@"c:\invoices\app.exe -j");
+
+=====================
+
+string firstName = "Bob";
+string greeting = "Hello";
+string message = greeting + " " + firstName + "!";
+Console.WriteLine(message);
+
+\\\\\\\\\\\\\\\\\\\\\\\\
+
+string firstName = "Bob";
+string message = $"Hello {firstName}!";
+Console.WriteLine(message);
+
+\\\\\\\\\\\\\\\\\\\\\\\\
+
+string projectName = "First-Project";
+Console.WriteLine($@"C:\Output\{projectName}\Data");
+
+=====================
+
+EU FIZ:
+string projectName = "ACME";
+
+string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
+
+Console.WriteLine("View English output: \n" + "\t" + @$"c:\Exercise\{projectName}\data.txt" + "\n");
+Console.WriteLine($"{russianMessage}:" + "\n\t" + @$"c:\Exercise\{projectName}\ru-RU\data.txt");
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\
+
+CORREÇÃO:
+string projectName = "ACME";
+string englishLocation = $@"c:\Exercise\{projectName}\data.txt";
+Console.WriteLine($"View English output:\n\t{englishLocation}\n");
+
+string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
+string russianLocation = $@"c:\Exercise\{projectName}\ru-RU\data.txt";
+Console.WriteLine($"{russianMessage}:\n\t{russianLocation}\n");
+
+=====================
+
+string firstName = "Bob";
+int widgetsSold = 7;
+Console.WriteLine(firstName + " sold " + (widgetsSold + 7) + " widgets.");
+
+\\\\\\\\\\\\\\\\\\\\\\\\
+
+int sum = 7 + 5;
+int difference = 7 - 5;
+int product = 7 * 5;
+
+Console.WriteLine("Sum: " + sum);
+Console.WriteLine("Difference: " + difference);
+Console.WriteLine("Product: " + product);
+
+decimal decimalQuotient = 7.0m / 5;
+Console.WriteLine($"Decimal quotient: {decimalQuotient}");
+
+\\\\\\\\\\\\\\\\\\\\\\\\
+
+int first = 7;
+int second = 5;
+decimal quotient = (decimal)first / (decimal)second;
+Console.WriteLine(quotient);
+
+=====================
+
+Resto divisão
+Console.WriteLine($"Modulus of 200 / 5 : {200 % 5}");
+Console.WriteLine($"Modulus of 7 / 5 : {7 % 5}");
+
+=====================
+
+Ordem de calculo
+int value1 = 3 + 4 * 5;
+int value2 = (3 + 4) * 5;
+Console.WriteLine(value1);
+Console.WriteLine(value2);
+
+=====================
+
+int value = 1;
+
+value = value + 1;
+Console.WriteLine($"Primeiro numero: {value}");
+
+value += 1;
+Console.WriteLine($"Segundo numero: {value}");
+
+value++;
+Console.WriteLine($"Terceiro numero: {value}");
+
+value = value - 1;
+Console.WriteLine($"Quarto numero: {value}");
+
+value -= 1;
+Console.WriteLine($"Quinto numero: {value}");
+
+value--;
+Console.WriteLine($"Sexto numero: {value}");
+
+=====================
+
+int value = 1;
+value++; 
+Console.WriteLine("Primeiro: " + value);
+Console.WriteLine($"Segundo: {value++}");
+Console.WriteLine("Terceiro: " + value);
+Console.WriteLine($"Quarto: " + (++value));
+
+=====================
+
+Exercício de converter em celcius:
+int fahrenheit = 94;
+decimal celcius = ((decimal)fahrenheit - 32) * 5/9;
+Console.WriteLine(@$"Temperatua em Fharenheit: {fahrenheit}°" + $"\nTemperatura em Celcius: {celcius:f1}°");
+
+=====================
+int quantNt = 5;
+
+int maria1 = 93;
+int maria2 = 87;
+int maria3 = 98;
+int maria4 = 95;
+int maria5 = 100;
+
+int nicolas1 = 80;
+int nicolas2 = 83;
+int nicolas3 = 82;
+int nicolas4 = 88;
+int nicolas5 = 85;
+
+int joao1 = 84;
+int joao2 = 96;
+int joao3 = 73;
+int joao4 = 85;
+int joao5 = 79;
+
+int paulo1 = 90;
+int paulo2 = 92;
+int paulo3 = 98;
+int paulo4 = 100;
+int paulo5 = 97;
+
+int MariaSom = maria1 + maria2 + maria3 + maria4 + maria5;
+int NicolasSom = nicolas1 + nicolas2 + nicolas3 + nicolas4 + nicolas5;
+int JoaoSom = joao1 + joao2 + joao3 + joao4 + joao5;
+int PauloSom = paulo1 + paulo2 + paulo3 + paulo4 + paulo5;
+
+decimal mariaMed = (decimal) MariaSom / quantNt;
+decimal nicolasMed = (decimal) NicolasSom / quantNt;
+decimal joaoMed = (decimal) JoaoSom / quantNt;
+decimal pauloMed = (decimal) PauloSom / quantNt;
+
+Console.WriteLine($"Maria: \t\t{mariaMed} \tA");
+Console.WriteLine($"Nicolas: \t{nicolasMed} \tB");
+Console.WriteLine($"João: \t\t{joaoMed} \tB");
+Console.WriteLine($"Paulo: \t\t{pauloMed} \tA");
+
+======================
+
+string estNome = "Sophia Johnson";
+
+string curso1Nome = "Ingles 101";
+string curso2Nome = "Algebra 101";
+string curso3Nome = "Biologia 101";
+string curso4Nome = "Ciência da comp. I";
+string curso5Nome = "Psicologia 101"; 
+
+int curso1credit = 3;
+int curso2credit = 3;
+int curso3credit = 4;
+int curso4credit = 4;
+int curso5credit = 3;
+
+int gradeA = 4;
+int gradeB = 3;
+
+int curso1grade = gradeA;
+int curso2grade = gradeB;
+int curso3grade = gradeB;
+int curso4grade = gradeB;
+int curso5grade = gradeA;
+
+int totalCredHoras = 0;
+
+totalCredHoras += curso1credit;
+totalCredHoras += curso2credit;
+totalCredHoras += curso3credit;
+totalCredHoras += curso4credit;
+totalCredHoras += curso5credit;
+
+int totalGradePts = 0;
+
+totalGradePts += curso1credit * curso1grade;
+totalGradePts += curso2credit * curso2grade;
+totalGradePts += curso3credit * curso3grade;
+totalGradePts += curso4credit * curso4grade;
+totalGradePts += curso5credit * curso5grade;
+
+decimal gradePtAverage = (decimal) totalGradePts / totalCredHoras;
+
+int leadingDigit = (int) gradePtAverage;
+int firstDigit = (int) (gradePtAverage * 10) % 10;
+int segundDigit = (int) (gradePtAverage * 100) % 10;
+
+Console.WriteLine($"Student: {estNome}\n");
+Console.WriteLine($"Curso \t\t\tGrade \t\tCred. Horas");
+
+Console.WriteLine($"{curso1Nome} \t\t{curso1grade} \t\t{curso1credit}");
+Console.WriteLine($"{curso2Nome} \t\t{curso2grade} \t\t{curso2credit}");
+Console.WriteLine($"{curso3Nome} \t\t{curso3grade} \t\t{curso3credit}");
+Console.WriteLine($"{curso4Nome} \t{curso4grade} \t\t{curso4credit}");
+Console.WriteLine($"{curso5Nome} \t\t{curso5grade} \t\t{curso5credit}");
+
+Console.WriteLine($"\nFinal GPA: \t\t{gradePtAverage:f2}");
+Console.WriteLine($"\nFinal GPA: \t\t{leadingDigit}.{firstDigit}{segundDigit}");
+
+
+=====================
+
+=====================
+
+=====================
+
+=====================
+
+=====================
+
+=====================
+
+=====================
+
+=====================
+
+=====================
+
+=====================
+
+=====================
+
+=====================
+
+=====================
